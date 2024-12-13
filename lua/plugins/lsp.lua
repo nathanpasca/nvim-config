@@ -64,7 +64,17 @@ return {
             },
           },
         },
-        html = {},
+        html = {
+          filetypes = { "html" },
+          init_options = {
+            provideFormatter = false,
+            configurationSection = { "html", "css", "javascript" },
+            embeddedLanguages = {
+              css = true,
+              javascript = true,
+            },
+          },
+        },
         lua_ls = {
           -- enabled = false,
           single_file_support = true,
