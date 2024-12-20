@@ -16,6 +16,10 @@ return {
         "php-cs-fixer",
         "phpstan",
         "blade-formatter",
+        -- Golang
+        "gopls",
+        "golangci-lint",
+        "goimports",
       })
     end,
   },
@@ -27,6 +31,23 @@ return {
       inlay_hints = { enabled = true },
       ---@type lspconfig.options
       servers = {
+        gopls = {
+          analyses = {
+            unusedparams = true,
+          },
+          staticcheck = true,
+          gofumpt = true,
+          usePlaceholders = true,
+          hints = {
+            assignVariableTypes = true,
+            compositeLiteralFields = true,
+            compositeLiteralTypes = true,
+            constantValues = true,
+            functionTypeParameters = true,
+            parameterNames = true,
+            rangeVariableTypes = true,
+          },
+        },
         -- Existing servers
         cssls = {},
         tailwindcss = {

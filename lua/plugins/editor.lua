@@ -6,6 +6,10 @@ return {
     opts = {},
   },
   {
+    "wakatime/vim-wakatime",
+    lazy = false,
+  },
+  {
     "telescope.nvim",
     priority = 1000,
     dependencies = {
